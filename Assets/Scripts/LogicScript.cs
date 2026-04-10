@@ -6,7 +6,8 @@ public class LogicScript : MonoBehaviour
 {
     public int score = 0;
     public Text scoreText;
-    public GameObject gameOverScreen; 
+    public GameObject gameOverScreen;
+    public Button pauseButton;
     //public BirdScript bird;
 
     public float initialMoveSpeed = 5;
@@ -50,6 +51,7 @@ public class LogicScript : MonoBehaviour
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+        pauseButton.interactable = false;
     }
 
     public void pauseGame()
